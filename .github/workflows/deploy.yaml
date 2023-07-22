@@ -15,14 +15,11 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install Yarn
-        run: npm install -g yarn
-
       - name: Install dependencies
-        run: yarn install
+        run: npm install
 
       - name: Build site
-        run: yarn build
+        run: npm run build
 
       - name: Deploy site
         uses: JamesIves/github-pages-deploy-action@4.1.4
